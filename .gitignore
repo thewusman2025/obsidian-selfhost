@@ -1,1 +1,5 @@
-vault_data/
+# Ignore local environment variables
+.env
+
+# Ignore Obsidian vault and configuration data
+config/
