@@ -7,8 +7,10 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=Etc/UTC
+      - CUSTOM_USER=${OBSIDIAN_USER}
+      - PASSWORD=${OBSIDIAN_PASSWORD}
     volumes:
       - ./config:/config
     ports:
-      - "3030:8080"
+      - "3030:3000" # Corrected internal port from 8080 to 3000
     restart: unless-stopped
