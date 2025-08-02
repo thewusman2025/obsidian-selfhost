@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  obsidian:
+    image: 'ghcr.io/sytone/obsidian-remote:latest'
+    container_name: obsidian_notes_service_clean
+    ports:
+      - "3030:8080" # Maps port 3030 on your VPS to the container's port 8080
+    volumes:
+      - ./vault_data:/vault # Your notes will be stored in a 'vault_data' folder
+    restart: unless-stopped
